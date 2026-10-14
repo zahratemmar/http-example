@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c1222" />
+  <title>Portal · Sign in</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <div class="brand"><span class="logo">✦</span> <span>nexa<span class="muted-brand">/portal</span></span></div>
+    <section id="login" class="panel" hidden>
+      <div class="eyebrow"><span class="status-dot"></span> SECURE ACCESS</div>
+      <h1>Welcome back<span class="accent">.</span></h1>
+      <p class="subheading">Sign in to continue to your workspace.</p>
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Enter your username" autocomplete="username" required autofocus />
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required />
+          <button id="toggle-password" type="button" aria-label="Show password">Show</button>
+        </div>
+        <p id="error" class="error" role="alert" aria-live="polite"></p>
+        <button class="primary" id="submit" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="hint">Private workspace · Authorized users only</div>
+    </section>
+    <section id="dashboard" class="panel" hidden>
+      <div class="eyebrow"><span class="status-dot"></span> AUTHENTICATED</div>
+      <h1>You're in<span class="accent">.</span></h1>
+      <p class="subheading">Signed in as <strong id="current-user"></strong>. This is your protected dashboard.</p>
+      <div class="dashboard-card"><span class="dashboard-icon">✓</span><div><strong>Login successful</strong><small>Your session is active.</small></div></div>
+      <button class="primary" id="logout" type="button">Log out <span aria-hidden="true">→</span></button>
+    </section>
+    <footer>© 2026 Nexa Portal <span>Minimal by design.</span></footer>
+  </main>
+</body>
+</html>
